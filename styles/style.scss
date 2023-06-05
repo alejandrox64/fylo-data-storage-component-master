@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+// colors
+$Gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+$Pale-Blue: hsl(243, 100%, 93%);
+$Grayish-Blue: hsl(229, 7%, 55%);
+$Dark-Blue: hsl(228, 56%, 26%);
+$Very-Dark-Light-blue:  hsl(228, 56%, 20%);
+$Very-Dark-Blue: hsl(229, 57%, 11%);
+
+
+@mixin display {
+    padding: 40px 25px 40px 40px;
+    width: 325px;
+    background-color: $Dark-Blue;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+    background-image: url(/proyecto5/fylo-data-storage-component-master/images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 16px;
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        margin: 150px 10px;
+        justify-content: center;
+        align-items: center;
+
+        .header {
+            @include display();
+            height: 200px;            
+            border-radius: 8px 80px 8px 8px;
+
+            .buttons-container {
+                width: 178px;
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    margin-top: 30px;
+                    background-color: $Very-Dark-Blue;
+                    border: none;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .card-storage {
+            @include display();
+            border-radius: 8px;
+            margin-top: 15px;
+            color: white;
+            font-weight: 400;
+            position: relative;
+            .usage {
+                text-align: center;
+                color: $Grayish-Blue;
+                b {
+                    color: white;
+                }
+            }
+
+            .range {
+                width: 260px;
+                height: 20px;
+                background-color: $Very-Dark-Light-blue;
+                border-radius: 80px;
+                margin: 15px 0;
+                display: flex;
+                align-items: center;
+                padding: 3px;
+
+                .range-value {
+                    width: 75%;
+                    height: 97%;
+                    border-radius: 80px;
+                    justify-content: center;
+                    background-image: linear-gradient( to right, $Gradient);
+                    display: flex;
+                    flex-direction: column;
+                    div {
+                        width: 10px;
+                        height: 10px;
+                        margin-right: 2px;
+                        background-color: white;
+                        border-radius: 50%;
+                        align-self: flex-end;
+                    }
+                }
+            }
+
+            .space-container {
+                display: flex;
+                justify-content: space-between;
+                font-size: 15px;
+            }
+
+            .memory-free {
+                position:absolute;
+                right: 75px;
+                bottom: -50px;
+                color: black;
+                background-color: $Pale-Blue;
+                border-radius: 10px;
+                color: $Grayish-Blue;
+                padding: 20px 45px;
+                font-size: 14px;
+                font-weight: 500;
+                align-content: center ;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                
+
+                span:first-child {
+                    color: black;
+                    font-weight: 500;
+                    font-size: 40px;
+                    margin-right: 7px;
+                }
+                
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width:965px) {
+    
+    body {
+        min-height: 50vh;
+        background-color: $Very-Dark-Blue;
+        background-image: url(/proyecto5/fylo-data-storage-component-master/images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-position: 0 80%;
+        background-size:100% 50%;
+
+        .main {
+            flex-direction: row;
+            .card-storage {
+                margin: 40px 0 0 25px;
+                width: 541px;
+                height: 155px;
+
+                .usage {
+                    text-align: left;
+                }
+
+                .range {
+                    width: 458px;
+                    position: relative;
+                }
+
+                .space-container {
+                    margin-right: 18px;
+                }
+
+                .memory-free {
+                    position: absolute;
+                    border-bottom-right-radius: 0;
+                    right: 45px;
+                    bottom: 130px;
+                    max-height: 800px;
+
+                    span:last-child {
+                        
+                        width: 35px;
+                        height: 35px;
+                        position: absolute;
+                        bottom: -25px;
+                        right: 0;
+                        background-color: $Pale-Blue;
+                        clip-path: polygon(100% 0, 0 0, 100% 100%);
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+.attribution { 
+    font-size: 15px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

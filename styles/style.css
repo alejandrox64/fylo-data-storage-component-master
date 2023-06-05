@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "League Spartan", sans-serif;
+  background-image: url(/proyecto5/fylo-data-storage-component-master/images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 16px;
+}
+body .main {
+  display: flex;
+  flex-direction: column;
+  margin: 150px 10px;
+  justify-content: center;
+  align-items: center;
+}
+body .main .header {
+  padding: 40px 25px 40px 40px;
+  width: 325px;
+  background-color: hsl(228, 56%, 26%);
+  height: 200px;
+  border-radius: 8px 80px 8px 8px;
+}
+body .main .header .buttons-container {
+  width: 178px;
+  display: flex;
+  justify-content: space-between;
+}
+body .main .header .buttons-container button {
+  margin-top: 30px;
+  background-color: hsl(229, 57%, 11%);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body .main .card-storage {
+  padding: 40px 25px 40px 40px;
+  width: 325px;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 8px;
+  margin-top: 15px;
+  color: white;
+  font-weight: 400;
+  position: relative;
+}
+body .main .card-storage .usage {
+  text-align: center;
+  color: hsl(229, 7%, 55%);
+}
+body .main .card-storage .usage b {
+  color: white;
+}
+body .main .card-storage .range {
+  width: 260px;
+  height: 20px;
+  background-color: hsl(228, 56%, 20%);
+  border-radius: 80px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+}
+body .main .card-storage .range .range-value {
+  width: 75%;
+  height: 97%;
+  border-radius: 80px;
+  justify-content: center;
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  display: flex;
+  flex-direction: column;
+}
+body .main .card-storage .range .range-value div {
+  width: 10px;
+  height: 10px;
+  margin-right: 2px;
+  background-color: white;
+  border-radius: 50%;
+  align-self: flex-end;
+}
+body .main .card-storage .space-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+body .main .card-storage .memory-free {
+  position: absolute;
+  right: 75px;
+  bottom: -50px;
+  color: black;
+  background-color: hsl(243, 100%, 93%);
+  border-radius: 10px;
+  color: hsl(229, 7%, 55%);
+  padding: 20px 45px;
+  font-size: 14px;
+  font-weight: 500;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .main .card-storage .memory-free span:first-child {
+  color: black;
+  font-weight: 500;
+  font-size: 40px;
+  margin-right: 7px;
+}
+
+@media screen and (min-width: 965px) {
+  body {
+    min-height: 50vh;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(/proyecto5/fylo-data-storage-component-master/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: 0 80%;
+    background-size: 100% 50%;
+  }
+  body .main {
+    flex-direction: row;
+  }
+  body .main .card-storage {
+    margin: 40px 0 0 25px;
+    width: 541px;
+    height: 155px;
+  }
+  body .main .card-storage .usage {
+    text-align: left;
+  }
+  body .main .card-storage .range {
+    width: 458px;
+    position: relative;
+  }
+  body .main .card-storage .space-container {
+    margin-right: 18px;
+  }
+  body .main .card-storage .memory-free {
+    position: absolute;
+    border-bottom-right-radius: 0;
+    right: 45px;
+    bottom: 130px;
+    max-height: 800px;
+  }
+  body .main .card-storage .memory-free span:last-child {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    background-color: hsl(243, 100%, 93%);
+    -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+  }
+}
+.attribution {
+  font-size: 15px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
